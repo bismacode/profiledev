@@ -17,7 +17,7 @@ Tugas Anda:
 
 export const getAIResponse = async (userPrompt: string) => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey:'AIzaSyBdhdklDbH3Y_1Upv3X1Cog9kqKNFjdNXo' });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: userPrompt,
