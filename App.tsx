@@ -454,10 +454,10 @@ const App: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">Email</p>
-                  <p className="text-lg font-medium group-hover:text-blue-400 transition-colors">dev@example.com</p>
+                  <p className="text-lg font-medium group-hover:text-blue-400 transition-colors">aikhacomp@gmail.com</p>
                 </div>
               </a>
-              <div className="flex items-center gap-4 group cursor-pointer">
+              {/* <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-purple-500/10 transition-colors">
                   <Linkedin className="w-5 h-5 text-purple-400" />
                 </div>
@@ -465,14 +465,14 @@ const App: React.FC = () => {
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">LinkedIn</p>
                   <p className="text-lg font-medium group-hover:text-purple-400 transition-colors">linkedin.com/in/yourprofile</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-slate-500/10 transition-colors">
                   <Github className="w-5 h-5 text-slate-300" />
                 </div>
                 <div>
                   <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">GitHub</p>
-                  <p className="text-lg font-medium group-hover:text-white transition-colors">github.com/yourusername</p>
+                  <p className="text-lg font-medium group-hover:text-white transition-colors">github.com/aikhacode</p>
                 </div>
               </div>
             </div>
