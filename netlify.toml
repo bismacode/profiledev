@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[env.production]
+  # API_KEY should be set in Netlify dashboard under Site settings > Build & deploy > Environment
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
