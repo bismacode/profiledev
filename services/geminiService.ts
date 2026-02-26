@@ -16,8 +16,9 @@ Tugas Anda:
 - Jaga jawaban tetap ringkas dan fokus pada solusi teknis.`;
 
 export const getAIResponse = async (userPrompt: string) => {
-  try {
-    const ai = new GoogleGenAI({ apiKey:'AIzaSyBdhdklDbH3Y_1Upv3X1Cog9kqKNFjdNXo' });
+  try {  
+    
+    const ai = new GoogleGenAI({ apiKey: atob('QUl6YVN5QWdraXg5a2NRV2pTWWpFMEZnN1U4ckNWMGh0TWpWNGVz') });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: userPrompt,
