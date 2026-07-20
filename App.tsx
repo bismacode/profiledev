@@ -218,8 +218,8 @@ const App: React.FC = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-4 shadow-lg' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-white text-xl">D</div>
-            <span className="text-xl font-bold tracking-tight">DevPortfolio</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center font-bold text-white text-xl">A</div>
+            <span className="text-xl font-bold tracking-tight">aikhacomp</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
@@ -457,6 +457,15 @@ const App: React.FC = () => {
                   <p className="text-lg font-medium group-hover:text-blue-400 transition-colors">aikhacomp@gmail.com</p>
                 </div>
               </a>
+              <a href="https://wa.me/628970641711" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+                <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-green-500/10 transition-colors">
+                  <Smartphone className="w-5 h-5 text-green-400" />
+                </div>
+                <div>
+                  <p className="text-xs text-slate-500 uppercase tracking-widest font-bold">WhatsApp</p>
+                  <p className="text-lg font-medium group-hover:text-green-400 transition-colors">+62 897-0641-711</p>
+                </div>
+              </a>
               {/* <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-purple-500/10 transition-colors">
                   <Linkedin className="w-5 h-5 text-purple-400" />
@@ -582,8 +591,8 @@ const App: React.FC = () => {
       <footer className="py-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-white">D</div>
-            <span className="font-bold tracking-tight">DevPortfolio</span>
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center font-bold text-white">A</div>
+            <span className="font-bold tracking-tight">aikhacomp</span>
           </div>
           <p className="text-sm text-slate-500">© 2024 Senior Fullstack Developer. Dibuat dengan presisi.</p>
           <div className="flex gap-6">
