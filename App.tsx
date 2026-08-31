@@ -149,7 +149,20 @@ const App: React.FC = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    const messageText = `Halo! Saya menghubungi Anda melalui form kontak website:
+
+*Nama:* ${formData.name}
+*Email:* ${formData.email}
+*Subjek:* ${formData.subject}
+*Pesan:*
+${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/628970641711?text=${encodeURIComponent(messageText)}`;
+
+    // Open WhatsApp link
+    window.open(whatsappUrl, '_blank');
+
     setIsSubmitting(false);
     setIsSubmitted(true);
     setFormData({ name: '', email: '', subject: '', message: '' });
