@@ -1,0 +1,20 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#050510"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00F0FF" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect x="530" y="100" width="140" height="140" rx="28" fill="url(#logo)" transform="rotate(45 600 170)"/>
+  <defs>
+    <linearGradient id="logo" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+  </defs>
+  <text x="600" y="360" text-anchor="middle" font-family="sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF">Wu Ma Dev</text>
+  <text x="600" y="420" text-anchor="middle" font-family="sans-serif" font-size="32" fill="#00F0FF">Website &bull; WebApp &bull; Dashboard &bull; AI Solutions</text>
+  <text x="600" y="480" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#7A7AA0">bismacode.my.id</text>
+</svg>
