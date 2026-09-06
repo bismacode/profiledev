@@ -1,5 +1,11 @@
 import { ImageResponse } from "next/og";
-import { getService } from "@/data/services";
+import { services, getService } from "@/data/services";
+
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  return services.map((s) => ({ slug: s.slug }));
+}
 
 export const size = {
   width: 1200,

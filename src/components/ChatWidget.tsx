@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Bot, Send, X, Sparkles } from "lucide-react";
-import { INTRO_MSG, INTRO_QUICK } from "@/lib/salesAgent";
+import { INTRO_MSG, INTRO_QUICK, SYSTEM_PROMPT } from "@/lib/salesAgent";
 
 type Message = { role: "bot" | "user"; text: string };
 
@@ -51,17 +51,37 @@ export default function ChatWidget() {
       { role: "user" as const, content: value },
     ];
 
+    const GROQ_API_KEY = process.env.NEXT_PUBLIC_GROQ_API_KEY;
+
     try {
-      const res = await fetch("/api/chat", {
+      if (!GROQ_API_KEY) {
+        throw new Error("GROQ_API_KEY belum dikonfigurasi");
+      }
+
+      const fullMessages = [
+        { role: "system" as const, content: SYSTEM_PROMPT },
+        ...chatHistory.slice(-20),
+      ];
+
+      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: chatHistory }),
+        headers: {
+          Authorization: `Bearer ${GROQ_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "openai/gpt-oss-120b",
+          messages: fullMessages,
+          temperature: 0.4,
+          max_tokens: 1024,
+          stream: true,
+        }),
         signal: controller.signal,
       });
 
       if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.error || `HTTP ${res.status}`);
+        const err = await res.text().catch(() => "");
+        throw new Error(`Groq API error: ${res.status} ${err}`);
       }
 
       const reader = res.body?.getReader();

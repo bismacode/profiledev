@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/data/services";
 
+export const dynamic = "force-static";
+
 const SITE_URL = "https://bismacode.my.id";
 
 export default function sitemap(): MetadataRoute.Sitemap {
